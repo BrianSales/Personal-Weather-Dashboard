@@ -52,11 +52,26 @@ function loadJson(url){
 
 function loadFiveDayForcast(url){
     $.get(url).done(function(weatherData){
-        console.log(weatherData)
+       
+       
         // Populate table and insert a row for each forecast
         var forecasts = weatherData.list;
         for (var i = 0; i < forecasts.length; i++) {
-            
+            var forecast = forecasts[i];
+            var date = new Date(forecast.dt * 1000).toLocaleDateString("en-US");
+            var time = new Date(forecast.dt * 1000).toLocaleTimeString("en-US");
+            var row = `
+         <tr>
+         <th scope="row">${date + ' ' + time}</td>
+            <td>${forecast.main.temp}</td>
+            <td>${forecast.main.humidity}</td>
+            <td>${forecast.wind.speed}</td>
+            <td>${forecast.main.temp_max}</td>
+            <td>${forecast.main.temp_min}</td>
+          </tr>
+          `
+          $('.tbody').append(row);
         }
+
     })    
 }
