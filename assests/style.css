@@ -41,7 +41,7 @@ header {
 }
 
 h1, h3, p, li {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia', Arial, Helvetica, sans-serif;
 }
 
 header h1 {
@@ -68,7 +68,7 @@ input {
 
 .search {
     padding: 25px;
-    background-color: #f5f6fa;
+    background-color: red;
 }
 
 .search h1 {

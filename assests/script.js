@@ -9,11 +9,7 @@ var fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast?q="
 var count = "&cnt=40"
 
 
-function weatherAsk(){
-    var url = api + input.value() + apiKey;
-    loadJson(url, gotData)
-    console.log(url)
-}
+
 
 $('#submit').on('click', function(){
     console.log('buttonclick')
@@ -72,6 +68,8 @@ function loadFiveDayForcast(url){
           `
           $('.tbody').append(row);
         }
+
+        return;
 
     })    
 }
