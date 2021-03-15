@@ -1,6 +1,29 @@
 .root{
     padding:0px;
     margin:0px;
+    background-color:aquamarine;
+}
+
+
+.green{
+    color: rgb(0, 155, 0)
+}
+
+.yellow{
+    color: #cccc00;
+
+}
+
+.red{
+    color: rgb( 155, 0, 0)
+}
+
+.purple{
+    color: purple;
+}
+
+.orange{
+    color: orange;
 }
 
 * {
