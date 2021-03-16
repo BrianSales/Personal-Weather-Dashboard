@@ -1,11 +1,11 @@
 
 
 // Define variables
-var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 var city = 'London';
 var apiKey = 'a9b4a8580c0d8f382ed6c59b947f9ed6';
 var units = '&units=imperial';
-var fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast?q="
+var fiveDayUrl = "https://api.openweathermap.org/data/2.5/forecast?q="
 var count = "&cnt=40"
 var uvUrl = "api.openweathermap.org/data/2.5/uvi?lat="
 
