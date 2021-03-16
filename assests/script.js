@@ -22,9 +22,11 @@ var uvUrl = "api.openweathermap.org/data/2.5/uvi?lat="
 
 $('#submit').on('click', function(){
     console.log('buttonclick')
-    $('.tbody').html("")
+    $("#fiveday").children().remove()
+    // $('.tbody').html("")
     var location = $('#query').val();
     var url = api + location + "&APPID=" + apiKey + units;
+    console.log(url)
     var fiveDay = fiveDayUrl + location + "&APPID=" + apiKey + units + count;
     
     loadJson(url)
@@ -74,7 +76,7 @@ function loadJson(url){
 
 
 function getFiveDay(lat, long){
-    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=${apiKey}&units=imperial`;
     $.get(url).done(function(data){
         console.log(data)
         getUvIndex(data.current.uvi)
