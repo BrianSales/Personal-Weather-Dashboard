@@ -30,7 +30,7 @@ $('#submit').on('click', function(){
     var fiveDay = fiveDayUrl + location + "&APPID=" + apiKey + units + count;
     
     loadJson(url)
-    loadFiveDayForcast(fiveDay)
+    // loadFiveDayForcast(fiveDay)
     
 
 
